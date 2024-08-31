@@ -2,6 +2,12 @@
 
 ## WP-Cli Commands
 
+### Get wp-cli version
+
+```bash
+wp --info
+```
+
 ### Update all the themes
 
 ```bash
