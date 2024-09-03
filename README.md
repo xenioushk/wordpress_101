@@ -14,6 +14,16 @@ wp --info
 wp theme update --all
 ```
 
+### Create a new plugin
+
+Navigate to `wp-content/plugins/`. Then run this command to create a new plugin called `my-awesome-plugin`.
+
+```bash
+wp scaffold plugin my-awesome-plugin
+```
+
+![create_a_wordpress_plugin_with_wpcli](/previews/create_a_wordpress_plugin_with_wpcli.jpg)
+
 ### Update all the plugins
 
 ```bash
