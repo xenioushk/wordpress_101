@@ -29,3 +29,7 @@ wp scaffold plugin my-awesome-plugin
 ```bash
 wp plugin update --all
 ```
+
+### Cron job & Transient API
+
+Check this [example code](/AppCronManager.php).

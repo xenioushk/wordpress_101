@@ -4,8 +4,8 @@
 * A simple WordPress cron job manager class
 * @since: 1.0
 * @author: Mahbub Alam Khan
-* @created: ..
-* @updated: ..2024
+* @created: 03.09.2024
+* @updated: 03.09.2024
 */
 
 class AppCronManager{
