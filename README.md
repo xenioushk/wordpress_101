@@ -43,5 +43,26 @@ Check this [example code](/AppCronManager.php).
  * @var array
  * @return array
  */
+```
 
+### Shortcode Class example
+
+```php
+class My_Shortcode{
+  public function __construct(){
+    $this->register_shortcode();
+  }
+
+  public function register_shortcode(){
+    add_shortcode('shortcode_tag', [$this, 'get_shortcode_output']);
+  }
+
+  public function get_shortcode_output($atts){
+    return "Hello world"
+  }
+}
+
+// Initalize the class.
+
+new My_Shortcode();
 ```
