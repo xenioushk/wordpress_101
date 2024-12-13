@@ -33,3 +33,15 @@ wp plugin update --all
 ### Cron job & Transient API
 
 Check this [example code](/AppCronManager.php).
+
+### WordPress function comment style
+
+```php
+/**
+ * List of views served by this composer.
+ *
+ * @var array
+ * @return array
+ */
+
+```
