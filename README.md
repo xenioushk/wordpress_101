@@ -34,7 +34,7 @@ wp plugin update --all
 
 Check this [example code](/AppCronManager.php).
 
-### WordPress function comment style
+### Function comment style
 
 ```php
 /**
