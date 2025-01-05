@@ -58,11 +58,34 @@ class My_Shortcode{
   }
 
   public function get_shortcode_output($atts){
-    return "Hello world"
+    return "Hello world";
   }
 }
 
 // Initalize the class.
-
 new My_Shortcode();
 ```
+
+### Allow custom post types to use theme templates
+
+👉 Open a template file for the currently active theme. Our targeted custom post types are 'bwl_kb' and 'portfolio'.
+
+👉 We would like to use full-width template for those post types. So, we have edited the `template-full-width.php` file and
+included the following code.
+
+👉 The `Template Post Type` section in the commented area is allowing the custom post types to use the `template-full-width.php` file.
+
+```php
+/**
+ *
+ * Template Name: Full Width Template
+ * Template Post Type: post, page, bwl_kb, portfolio
+ * The template for displaying the contents without any sidebar.
+ *
+ * @package BwlKdeskTheme
+ */
+```
+
+Now, if you go to the add/edit page of the portfolio or bwl_kb, you will be able to use the full-width template. ,🚀
+
+![use_custom_post_type_theme_full_width_template](/previews/use_custom_post_type_theme_full_width_template.jpg)
