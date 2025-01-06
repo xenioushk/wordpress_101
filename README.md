@@ -62,7 +62,7 @@ class My_Shortcode{
   }
 }
 
-// Initalize the class.
+// Initialize the class
 new My_Shortcode();
 ```
 
