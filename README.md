@@ -165,17 +165,29 @@ GET /wp-json/wp/v2/petitions?_embed
 
 ## Expose the Meta Field to the REST API
 
-By default, not all meta fields are available via REST API. You must register your `sign_count` meta key with `show_in_rest => true` when registering the meta.
+By default, not all meta fields are available via REST API. You must register your `_cmb_bptm_sign_lists` meta key with `show_in_rest => true` when registering the meta.
 
 ```php
 function register_petitions_meta() {
-    register_post_meta('petitions', 'sign_count', [
+    register_post_meta('petitions', '_cmb_bptm_sign_lists', [
         'type'         => 'integer',
         'single'       => true,
         'show_in_rest' => true, //Must be true
     ]);
 }
-add_action('init', 'register_petitions_meta');
+add_action('rest_api_init', 'register_petitions_meta');
 ```
 
-Now, sign_count will be accessible as part of the `meta` object.
+![use_custom_post_type_theme_full_width_template](/previews/sign_lists_meta_field_count.jpg)
+
+🚧 **Important Note:**
+
+You must need to enable `custom-fields` support while registering custom post type.
+
+```php
+$support = [ 'title', 'thumbnail', 'comments', 'author', 'editor', 'custom-fields' ];
+```
+
+![use_custom_post_type_theme_full_width_template](/previews/sign_lists_gutenburg_meta_count.jpg)
+
+Now, `_cmb_bptm_sign_lists` will be accessible as part of the `meta` object.
